@@ -14,10 +14,17 @@ public class Student
     }
     
     //Second method to add a grade with overloading
-
     public void AddGrade(params double[] grades)
     {
         Grades.AddRange(grades);
+    }
+    
+    //Method to Calculate Average Grades for the Student Class
+    public double CalculateAverageGrade()
+    {
+        if (Grades.Count == 0)
+            return 0;
+        return Grades.Average();
     }
     
     public Student()
