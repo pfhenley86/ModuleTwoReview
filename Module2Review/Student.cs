@@ -5,7 +5,7 @@ public class Student
     //Define class properties
     public string Name { get; set; }
     public int Id { get; set; }
-    public List<double> Grades { get; set; } = new List<double>{100.0, 90.0, 80.0, 70.0, 60.0};
+    public List<double> Grades { get; set; } = new();
 
     // First Method To add a grade
     public void AddGrade(double grade)
