@@ -9,7 +9,7 @@ public class Course
     public List<Student> EnrolledStudents;
 
     //Method to check if Student is enrolled
-    public void AddEnrolledStudent(Student student)
+    public void EnrollStudent(Student student)
     {
         bool alreadyEnrolled = false;
 
@@ -20,16 +20,16 @@ public class Course
                 alreadyEnrolled = true;
                 break;
             }
+        }
 
-            if (alreadyEnrolled)
-            {
-                EnrolledStudents.Add(student);
-                Console.WriteLine($"Enrolled {student.Name} student.");
-            }
-            else
-            {
-                Console.WriteLine($"Student {student.Name} is already enrolled.");
-            }
+        if (!alreadyEnrolled)
+        {
+            EnrolledStudents.Add(student);
+            Console.WriteLine($"Enrolled student {student.Name}.");
+        }
+        else
+        {
+            Console.WriteLine($"Student {student.Name} is already enrolled.");
         }
     }
 

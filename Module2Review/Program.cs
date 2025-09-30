@@ -56,5 +56,22 @@ class Program
             Console.WriteLine($"Average Grade: {student.CalculateAverageGrade():F2}");
             Console.WriteLine(); // Extra space between students
         }
+        
+        //Course Info
+        Course courseOne = new Course();
+        courseOne.CourseName = "History";
+        courseOne.CourseCode = "One";
+        foreach (Student student in students)
+        {
+            courseOne.EnrollStudent(student);
+        }
+        
+        //Display Students in  Course
+        Console.WriteLine($"\nStudents enrolled in {courseOne.CourseName}:");
+        foreach (Student student in courseOne.EnrolledStudents)
+        {
+            Console.WriteLine($"ID: {student.Id}, Name: {student.Name}");
+        }
+
     }
 }
